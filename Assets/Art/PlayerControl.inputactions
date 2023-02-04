@@ -67,6 +67,17 @@
                 },
                 {
                     "name": "",
+                    "id": "cee5b524-45f5-47c5-9750-1e22f728b672",
+                    "path": "<XInputController>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AnswerUp",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "e1d56777-13b1-47fe-a622-adc52fb5f262",
                     "path": "<DualShockGamepad>/buttonWest",
                     "interactions": "",
@@ -80,6 +91,17 @@
                     "name": "",
                     "id": "67701c2c-e1f8-48b9-a681-9ad8f13aa677",
                     "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AnswerLeft",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c52d24b8-a21a-4723-9a8a-aaf52ae8e772",
+                    "path": "<XInputController>/buttonWest",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -111,6 +133,17 @@
                 },
                 {
                     "name": "",
+                    "id": "708fe21e-523c-40aa-befb-f70628a6bf17",
+                    "path": "<XInputController>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AnswerDown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "9736576a-3f16-49e5-bd6e-dc34c8192f3c",
                     "path": "<DualShockGamepad>/buttonEast",
                     "interactions": "",
@@ -124,6 +157,17 @@
                     "name": "",
                     "id": "7cf212db-5716-4f73-a1a8-62d8347e2c03",
                     "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AnswerRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "faf42f8f-cfe5-40b8-813e-8b366e349595",
+                    "path": "<XInputController>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -16,22 +16,22 @@ public class PlayerInputProvider : MonoBehaviour
     }
     public void AnswerRight(InputAction.CallbackContext context){
         if (context.phase == InputActionPhase.Performed) {
-            Debug.Log("RIGHT :");
+            Debug.Log("RIGHT :" + playerIndex);
         }
     }
     public void AnswerDown(InputAction.CallbackContext context){
         if (context.phase == InputActionPhase.Performed) {
-            Debug.Log("DOWN :");
+            Debug.Log("DOWN :"+ playerIndex);
         }
     }
     public void AnswerLeft(InputAction.CallbackContext context){
         if (context.phase == InputActionPhase.Performed) {
-            Debug.Log("LEFT :");
+            Debug.Log("LEFT :"+ playerIndex);
         }
     }
     public void AnswerUp(InputAction.CallbackContext context){
         if (context.phase == InputActionPhase.Performed) {
-            Debug.Log("UP :");
+            Debug.Log("UP :"+ playerIndex);
         }
     }
 }
