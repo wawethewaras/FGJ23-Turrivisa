@@ -10,16 +10,12 @@ public class CurrentQuestion {
     public string bAnswer;
     public string cAnswer;
     public string dAnswer;
+    public string category;
+
 }
 
 public class QuestionManager : MonoBehaviour
 {
-    [ContextMenu("SetCurrentQuestion")]
-    public void SetCurrentQuestion(){
-
-        currentQuestion = testquestion;
-    }
-    public CurrentQuestion testquestion;
     public CurrentQuestion currentQuestion;
 
     static List<string> currentQuestions = new List<string>();
