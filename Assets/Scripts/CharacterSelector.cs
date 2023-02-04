@@ -11,6 +11,7 @@ public class CharacterSelector : MonoBehaviour
     private int currentIndex = 0;
 
     public Image image;
+    public int selectedCharacter;
 
     public void ChangeCharacterForward() {
         currentIndex++;
@@ -25,5 +26,10 @@ public class CharacterSelector : MonoBehaviour
             currentIndex = characters.Count- 1;
         }
         image.sprite = characters[currentIndex];
+    }
+
+    public void SelectCharacter()
+    {
+        selectedCharacter = currentIndex;
     }
 }
