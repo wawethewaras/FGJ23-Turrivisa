@@ -6,12 +6,13 @@ using System.Linq;
 
 public class PlayerInputProvider : MonoBehaviour
 {
+    public static List<PlayerInputProvider> inputproviders = new List<PlayerInputProvider>();
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        //playerInput = GetComponent<PlayerInput>();
-        //int index = playerInput.playerIndex;
+    public int playerIndex;
+
+    public void Start(){
+
+        inputproviders.Add(this);
     }
     public void AnswerRight(InputAction.CallbackContext context){
         if (context.phase == InputActionPhase.Performed) {
@@ -23,12 +24,12 @@ public class PlayerInputProvider : MonoBehaviour
             Debug.Log("DOWN :");
         }
     }
-        public void AnswerLeft(InputAction.CallbackContext context){
+    public void AnswerLeft(InputAction.CallbackContext context){
         if (context.phase == InputActionPhase.Performed) {
             Debug.Log("LEFT :");
         }
     }
-        public void AnswerUp(InputAction.CallbackContext context){
+    public void AnswerUp(InputAction.CallbackContext context){
         if (context.phase == InputActionPhase.Performed) {
             Debug.Log("UP :");
         }
