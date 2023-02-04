@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4715294473582641074}
   - component: {fileID: 4715294473582641075}
-  - component: {fileID: 4715294473582641077}
+  - component: {fileID: 2086739108}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -45,7 +45,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da60f334c47858c4289af73e9d044d93, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4715294473582641077
+  playerIndex: 0
+  answeredQuestion: 0
+  scoreManager: {fileID: 2086739108}
+--- !u!114 &2086739108
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54,88 +57,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4715294473582641073}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Script: {fileID: 11500000, guid: 585b39731ae00a6429b215337fec6a09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: 6c006902fe2d2a94d93f1abbdb892d3c, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4715294473582641075}
-        m_TargetAssemblyTypeName: PlayerInputProvider, Assembly-CSharp
-        m_MethodName: AnswerUp
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: c732fc3d-18f8-4a33-bee0-2ddca057db66
-    m_ActionName: Player/AnswerUp[/DualShock4GamepadHID/buttonNorth,/Keyboard/1]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4715294473582641075}
-        m_TargetAssemblyTypeName: PlayerInputProvider, Assembly-CSharp
-        m_MethodName: AnswerLeft
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: dfb072ed-0e38-4c13-85dd-66e53bfd1c02
-    m_ActionName: Player/AnswerLeft[/DualShock4GamepadHID/buttonWest,/Keyboard/a]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4715294473582641075}
-        m_TargetAssemblyTypeName: PlayerInputProvider, Assembly-CSharp
-        m_MethodName: AnswerDown
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: d380db15-035c-4265-8265-5a97b971b5e4
-    m_ActionName: Player/AnswerDown[/DualShock4GamepadHID/buttonSouth,/Keyboard/s]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4715294473582641075}
-        m_TargetAssemblyTypeName: PlayerInputProvider, Assembly-CSharp
-        m_MethodName: AnswerRight
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 62cf9c60-e588-4e03-83f6-627fade2ed40
-    m_ActionName: Player/AnswerRight[/DualShock4GamepadHID/buttonEast,/Keyboard/d]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  score: 0
