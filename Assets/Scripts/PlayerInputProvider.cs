@@ -35,6 +35,7 @@ public class PlayerInputProvider : MonoBehaviour
             else {
                 scoreManager.health++;
             }
+            answeredQuestion = true;
         }
     }
     public void AnswerDown(InputAction.CallbackContext context){
@@ -46,6 +47,7 @@ public class PlayerInputProvider : MonoBehaviour
             else {
                 scoreManager.health++;
             }
+            answeredQuestion = true;
         }
     }
     public void AnswerLeft(InputAction.CallbackContext context){
@@ -57,6 +59,7 @@ public class PlayerInputProvider : MonoBehaviour
             else {
                 scoreManager.health++;
             }
+            answeredQuestion = true;
         }
     }
     public void AnswerUp(InputAction.CallbackContext context){
@@ -68,6 +71,7 @@ public class PlayerInputProvider : MonoBehaviour
             else {
                 scoreManager.health++;
             }
+            answeredQuestion = true;
         }
     }
 }
