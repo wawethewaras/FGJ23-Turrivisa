@@ -18,8 +18,16 @@ public class QuestionManager : MonoBehaviour
 {
     public CurrentQuestion currentQuestion;
 
+    static List<CurrentQuestion> currentQuestionCategory = new List<CurrentQuestion>();
+
     static List<string> currentQuestions = new List<string>();
     public static int correctAnswerIndex = 0;
+    // public void InitQuestions(){
+    //     var index = UnityEngine.Random.Range(0, QuestionParser.categoryList-1);
+    //     var category = QuestionParser.categoryList[index];
+    //     currentQuestionCategory = QuestionParser.allSortedQuestions[category];
+    //     QuestionParser.categoryList.RemoveAt(index);
+    // }
 
     [ContextMenu("CreateQuestions")]
     public void CreateQuestions(){

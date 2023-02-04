@@ -7,7 +7,8 @@ using System.Linq;
 
 public class QuestionParser : MonoBehaviour
 {
-    public List<CurrentQuestion> allQuestions;
+    public static List<CurrentQuestion> allQuestions;
+    public static List<string> categoryList = new List<string>();
 
     public Dictionary<string,List<CurrentQuestion>> allSortedQuestions;
     // Start is called before the first frame update
@@ -47,7 +48,9 @@ public class QuestionParser : MonoBehaviour
             question.cAnswer = values[3];
             question.dAnswer = values[4];
             question.category = values[5];
-
+            if(!categoryList.Contains(question.category)){
+                categoryList.Add(question.category);
+            }
 			list.Add (question);
 		}
 		return list;
