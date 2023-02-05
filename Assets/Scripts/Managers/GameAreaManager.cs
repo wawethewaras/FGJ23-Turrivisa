@@ -71,6 +71,7 @@ public class GameAreaManager : MonoBehaviour
                 gameState = GameState.StartOfCategory;
                 break;
             case GameState.EndGame:
+                Scenes.LoadNewScene("WinScreen");
                 break;
         }
     }
