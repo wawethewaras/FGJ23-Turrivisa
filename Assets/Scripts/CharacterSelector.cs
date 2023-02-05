@@ -12,6 +12,8 @@ public class CharacterSelector : MonoBehaviour
 
     public Image image;
     public int selectedCharacter;
+    public int playerIndex;
+    public PlayerInfo playerInfo;
 
     public void ChangeCharacterForward() {
         currentIndex++;
@@ -19,6 +21,7 @@ public class CharacterSelector : MonoBehaviour
             currentIndex = 0;
         }
         image.sprite = characters[currentIndex];
+        SelectCharacter();
     }
         public void ChangeCharacterBackward() {
         currentIndex--;
@@ -26,10 +29,11 @@ public class CharacterSelector : MonoBehaviour
             currentIndex = characters.Count- 1;
         }
         image.sprite = characters[currentIndex];
-    }
+        SelectCharacter();
+        }
 
     public void SelectCharacter()
     {
-        selectedCharacter = currentIndex;
+        playerInfo.SetPlayerCharacter(playerIndex, currentIndex);
     }
 }
