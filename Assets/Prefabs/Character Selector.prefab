@@ -37,8 +37,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -221.4585, y: 88.34099}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -200, y: 178}
+  m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3938659435911946719
 CanvasRenderer:
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Next
+  m_text: '>'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -411,9 +411,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Previous
-
-'
+  m_text: <
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -492,6 +490,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4958702156758576874}
   - component: {fileID: 6587380521079915537}
+  - component: {fileID: 859745225513917868}
   m_Layer: 0
   m_Name: Character Selector
   m_TagString: Untagged
@@ -529,12 +528,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 43adbfa10a184d74ea7cb7154a5a721f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectFrom: 
   characters:
   - {fileID: 21300000, guid: c27efa1b045cdbf49b940781008eaf12, type: 3}
   - {fileID: 21300000, guid: 07e62f4af937f3946869812d8c1cd64a, type: 3}
   - {fileID: 21300000, guid: 69f38a1c5c52cf449b67ba927b4bad7d, type: 3}
   - {fileID: 21300000, guid: e488588c42d82504b89cd2c1a977f544, type: 3}
   image: {fileID: 4680438173511489903}
+  selectedCharacter: 0
+  playerIndex: 0
+  playerInfo: {fileID: 0}
+--- !u!114 &859745225513917868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7572799484425114628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da60f334c47858c4289af73e9d044d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerIndex: 0
+  isActive: 0
+  answeredQuestion: 1
+  scoreManager: {fileID: 0}
+  AnsweredCorrectly: 0
+  scoreText: {fileID: 0}
+  characterSelector: {fileID: 6587380521079915537}
+  delay: 0.2
+  counter: 0
+  currentMoveInputX: 0
 --- !u!1 &8922937323009441550
 GameObject:
   m_ObjectHideFlags: 0
@@ -572,8 +597,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27.458496, y: 88.34099}
-  m_SizeDelta: {x: 160, y: 30}
+  m_AnchoredPosition: {x: -50, y: 178}
+  m_SizeDelta: {x: 45, y: 45}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3315751809333462386
 CanvasRenderer:

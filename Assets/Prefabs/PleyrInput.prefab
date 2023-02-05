@@ -122,6 +122,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 62cf9c60-e588-4e03-83f6-627fade2ed40
     m_ActionName: Player/AnswerRight[/DualShock4GamepadHID/buttonEast,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2816760465062798970}
+        m_TargetAssemblyTypeName: InputManager, Assembly-CSharp
+        m_MethodName: SelectCharacter
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6f4525e5-45f8-44f1-a96e-b629aeecfaad
+    m_ActionName: Player/Select Character[/Keyboard/a,/Keyboard/d]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player

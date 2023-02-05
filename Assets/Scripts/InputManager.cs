@@ -43,4 +43,9 @@ public class InputManager : MonoBehaviour
         playerInputProvider.AnswerUp(context);
 
     }
+    public void SelectCharacter(InputAction.CallbackContext context){
+
+        var movement = context.ReadValue<Vector2>();
+        playerInputProvider.SelectCharacter(movement);
+    }
 }

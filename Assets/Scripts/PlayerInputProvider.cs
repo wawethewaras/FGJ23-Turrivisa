@@ -23,12 +23,34 @@ public class PlayerInputProvider : MonoBehaviour
     public ScoreManager scoreManager;
     public bool AnsweredCorrectly = false;
     public TMP_Text scoreText;
+    public CharacterSelector characterSelector;
+    public float delay = 0.1f;
+    public float counter = 0f;
+    public float currentMoveInputX = 0;
 
     public void Start(){
         scoreManager = GetComponent<ScoreManager>();
-        scoreText.text = "0";
+        if(scoreText != null){
+            scoreText.text = "0";
+        }
 
         inputproviders.Add(this);
+    }
+    public void Update(){
+        if(counter > 0){
+            counter -= Time.deltaTime;
+        }
+        if(counter > 0 || Mathf.Abs(currentMoveInputX) < 0.5f){
+            return;
+        }
+        counter = delay;
+
+        if(currentMoveInputX > 0.7f) {
+            characterSelector.ChangeCharacterBackward();
+        }
+        if(currentMoveInputX < -0.7f) {
+            characterSelector.ChangeCharacterForward();
+        }
     }
     public void Reset(){
         if(isActive){
@@ -61,6 +83,18 @@ public class PlayerInputProvider : MonoBehaviour
         }
     }
 
+
+    public void SelectCharacter(Vector2 direction){
+        if(direction.x > 0.7f) {
+            currentMoveInputX = 1;
+        }
+        else if(direction.x < -0.7f) {
+            currentMoveInputX = -1;
+        }
+        else {
+            currentMoveInputX = 0;
+        }
+    }
     public void CheckAnswer(){
         if(AnsweredCorrectly){
             scoreManager.score += 100;
