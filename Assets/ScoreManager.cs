@@ -30,11 +30,19 @@ public class ScoreManager : MonoBehaviour
 
     public void TakeHealth()
     {
-        health--;
+        Debug.Log("Kutsuu TakeHealth funktiota");
+
+
 
         GameObject child = gameObject.transform.GetChild(0).gameObject;
         Animator animator = child.GetComponent<Animator>();
 
+        animator.SetInteger("TeethLeft", health);
+
+        health--;
+
         animator.SetInteger("Health", health);
+
+        Debug.Log("Animatorin integer arvo: " + animator.GetInteger("Health"));
     }
 }
