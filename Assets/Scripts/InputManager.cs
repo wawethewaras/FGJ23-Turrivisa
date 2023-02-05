@@ -13,7 +13,7 @@ public class InputManager : MonoBehaviour
     {
         var index = playerInput.playerIndex;
         playerInputProvider = PlayerInputProvider.inputproviders.FirstOrDefault(m => m.playerIndex == index);
-    
+        playerInputProvider.isActive = true;
     }
 
     public void AnswerRight(InputAction.CallbackContext context){

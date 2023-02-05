@@ -5,24 +5,20 @@ using System.Collections.Generic;
 using System.Text.RegularExpressions;
 using System.Linq;
 
-public class QuestionParser : MonoBehaviour
+public static class QuestionParser
 {
     public static List<CurrentQuestion> allQuestions;
     public static List<string> categoryList = new List<string>();
 
     public static Dictionary<string,List<CurrentQuestion>> allSortedQuestions;
     // Start is called before the first frame update
-    void Start()
+    public static void Init()
     {
         allQuestions = Read ("Kymysykset");
         allSortedQuestions = allQuestions.GroupBy(o => o.category).ToDictionary(g => g.Key, g => g.ToList());;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
     static string SPLIT_RE = @",(?=(?:[^""]*""[^""]*"")*(?![^""]*""))";
 	static string LINE_SPLIT_RE = @"\r\n|\n\r|\n|\r";
 	static char[] TRIM_CHARS = { '\"' };
