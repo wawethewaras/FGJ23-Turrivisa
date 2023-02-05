@@ -10,7 +10,7 @@ public class QuestionParser : MonoBehaviour
     public static List<CurrentQuestion> allQuestions;
     public static List<string> categoryList = new List<string>();
 
-    public Dictionary<string,List<CurrentQuestion>> allSortedQuestions;
+    public static Dictionary<string,List<CurrentQuestion>> allSortedQuestions;
     // Start is called before the first frame update
     void Start()
     {
@@ -38,7 +38,6 @@ public class QuestionParser : MonoBehaviour
 
 		var header = Regex.Split(lines[0], SPLIT_RE);
 		for(var i=1; i < lines.Length; i++) {
-            Debug.Log(lines[i]);
 			var values = Regex.Split(lines[i], SPLIT_RE);
 			if(values.Length == 0 ||values[0] == "") continue;
             CurrentQuestion question = new CurrentQuestion();

@@ -16,8 +16,6 @@ public class ScoreManager : MonoBehaviour
 
     public void Start()
     {
-        playerInfo = FindObjectOfType<PlayerInfo>();
-
         characterIndex = playerInfo.GetCharacter(playerIndex);
 
         for (int i = 0; i < characters.Length; i++)

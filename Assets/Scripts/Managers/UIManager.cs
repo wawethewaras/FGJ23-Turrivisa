@@ -12,28 +12,15 @@ public class UIManager : MonoBehaviour
     public TMP_Text cButton;
     public TMP_Text dButton;
 
+    public void SetQuestionText(CurrentQuestion currentQuestion){
+        questionText.text  = currentQuestion.currentQuestion;
+        aButton.text  = currentQuestion.aAnswer;
+        bButton.text  = currentQuestion.bAnswer;
+        cButton.text  = currentQuestion.cAnswer;
+        dButton.text  = currentQuestion.dAnswer;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        questionText.text = "Select a category";
-
-        TextAsset questions = Resources.Load<TextAsset>("Kymysykset");
-
-        string[] data = questions.text.Split('\n');
-
+    }
+    public void ResetQuestions(){
         
-
-        for (int i = 0; i < data.Length; i++)
-        {
-            string[] datas = data[i].Split(',');
-            for (int d = 0; d < datas.Length; d++)
-            {
-                Debug.Log(datas[d]);
-            }
-        }
-
-        // Debug.Log(data[5]);
     }
 }

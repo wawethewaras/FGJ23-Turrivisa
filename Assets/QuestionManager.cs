@@ -17,21 +17,28 @@ public class CurrentQuestion {
 public class QuestionManager : MonoBehaviour
 {
     public CurrentQuestion currentQuestion;
+    public UIManager uIManager;
 
     static List<CurrentQuestion> currentQuestionCategory = new List<CurrentQuestion>();
 
     static List<string> currentQuestions = new List<string>();
     public static int correctAnswerIndex = 0;
-    // public void InitQuestions(){
-    //     var index = UnityEngine.Random.Range(0, QuestionParser.categoryList-1);
-    //     var category = QuestionParser.categoryList[index];
-    //     currentQuestionCategory = QuestionParser.allSortedQuestions[category];
-    //     QuestionParser.categoryList.RemoveAt(index);
-    // }
+    public void InitQuestions(){
+        var index = UnityEngine.Random.Range(0, QuestionParser.categoryList.Count-1);
+        var category = QuestionParser.categoryList[index];
+        currentQuestionCategory = QuestionParser.allSortedQuestions[category];
+        QuestionParser.categoryList.RemoveAt(index);
+    }
 
     [ContextMenu("CreateQuestions")]
     public void CreateQuestions(){
         currentQuestions.Clear();
+        if(currentQuestionCategory.Count < 0){
+            //No more questions in category
+
+        }
+        var index = UnityEngine.Random.Range(0, currentQuestionCategory.Count-1);
+        currentQuestion = currentQuestionCategory[index];
         currentQuestions.Add(currentQuestion.aAnswer);
         currentQuestions.Add(currentQuestion.bAnswer);
         currentQuestions.Add(currentQuestion.cAnswer);
@@ -43,6 +50,7 @@ public class QuestionManager : MonoBehaviour
                 break;
             }
         }
+        uIManager.SetQuestionText(currentQuestion);
     }
 
     //0 Up, 1 Right, 2 Down, 3 Left
@@ -58,5 +66,7 @@ public class QuestionManager : MonoBehaviour
             input.Reset();
 
         }
+        uIManager.ResetQuestions();
+
     }
 }

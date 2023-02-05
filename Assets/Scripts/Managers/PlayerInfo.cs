@@ -2,14 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInfo : MonoBehaviour
+[CreateAssetMenu(fileName = "PlayerInfo", menuName = "ScriptableObjects/PlayerInfo", order = 1)]
+public class PlayerInfo : ScriptableObject
 {
-    public static PlayerInfo Instance;
-    private void Awake()
-    {
-        Instance = this;
-        DontDestroyOnLoad(gameObject);
-    }
+
     public int playerCharacter0;
     public int playerCharacter1;
     public int playerCharacter2;
