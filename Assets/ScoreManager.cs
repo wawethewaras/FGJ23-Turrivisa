@@ -47,5 +47,6 @@ public class ScoreManager : MonoBehaviour
 
         ParticleSystem blood = child.GetComponent<ParticleSystem>();
         blood.Play();
+
     }
 }
