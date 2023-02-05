@@ -10,7 +10,7 @@ public class ScoreManager : MonoBehaviour
 
     public PlayerInfo playerInfo;
 
-    public GameObject[] characters;
+    public List<GameObject> characters;
 
     private int characterIndex;
 
@@ -18,12 +18,23 @@ public class ScoreManager : MonoBehaviour
     {
         characterIndex = playerInfo.GetCharacter(playerIndex);
 
-        for (int i = 0; i < characters.Length; i++)
+        for (int i = characters.Count - 1; i >= 0; i--)
         {
             if (i != characterIndex)
             {
                 GameObject.Destroy(characters[i]);
+                characters.RemoveAt(i);
             }
         }
+    }
+
+    public void TakeHealth()
+    {
+        health--;
+
+        GameObject child = gameObject.transform.GetChild(0).gameObject;
+        Animator animator = child.GetComponent<Animator>();
+
+        animator.SetInteger("Health", health);
     }
 }
