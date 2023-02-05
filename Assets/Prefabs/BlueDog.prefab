@@ -178,6 +178,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5338565996068577587}
   - component: {fileID: 5338565996068577586}
+  - component: {fileID: 3735618167909819040}
   m_Layer: 0
   m_Name: BlueDog
   m_TagString: Untagged
@@ -225,6 +226,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &3735618167909819040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5338565996068577589}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b3b3f457d9ab34c8d6cf72a290bcb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blood: {fileID: 9158719344585149132}
 --- !u!1 &5338565996320554431
 GameObject:
   m_ObjectHideFlags: 0
@@ -1496,6 +1510,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 48e6ad6701c2ec54eb00e3f384448503, type: 3}
+--- !u!198 &9158719344585149132 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3822478309309374272, guid: 48e6ad6701c2ec54eb00e3f384448503, type: 3}
+  m_PrefabInstance: {fileID: 5338565996233512332}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &9158719344585149133 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3822478309309374273, guid: 48e6ad6701c2ec54eb00e3f384448503, type: 3}

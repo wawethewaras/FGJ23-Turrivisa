@@ -45,8 +45,7 @@ public class ScoreManager : MonoBehaviour
 
         Debug.Log("Animatorin integer arvo: " + animator.GetInteger("Health"));
 
-        ParticleSystem blood = child.GetComponent<ParticleSystem>();
-        blood.Play();
+        child.GetComponent<StartParticles>().StartEffect();
 
     }
 }
