@@ -43,8 +43,6 @@ public class ScoreManager : MonoBehaviour
 
         animator.SetInteger("Health", health);
 
-        Debug.Log("Animatorin integer arvo: " + animator.GetInteger("Health"));
-
         child.GetComponent<StartParticles>().StartEffect();
 
     }

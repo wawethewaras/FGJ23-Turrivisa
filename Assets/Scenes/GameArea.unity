@@ -960,6 +960,7 @@ MonoBehaviour:
   player1: {fileID: 2075294023}
   player2: {fileID: 1650792384}
   player3: {fileID: 1765813470}
+  score: {fileID: 11400000, guid: a5e15f8b7ca0aa04991d33b2a3687d9e, type: 2}
   gameState: 0
   questionsInCategory: 5
   currentquestionsInCategory: 0

@@ -19,6 +19,7 @@ public class GameAreaManager : MonoBehaviour
     public GameObject player1;
     public GameObject player2;
     public GameObject player3;
+    public ScoreSO score;
 
     public GameState gameState;
 
@@ -100,5 +101,7 @@ public class GameAreaManager : MonoBehaviour
         }
         currentquestionsInCategory++;
         gameState = GameState.StartOfQuestion;
+        score.setWinner();
+
     }
 }
