@@ -100,7 +100,8 @@ public class PlayerInputProvider : MonoBehaviour
             scoreManager.score += 100;
         }
         else {
-            scoreManager.health--;
+            //scoreManager.health--;
+            scoreManager.TakeHealth();
         }
         scoreText.text = "" + scoreManager.score;
     }
