@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Linq;
+using TMPro;
+
     public enum AnswerSet {
         UP = 0,
         RIGHT = 1,
@@ -20,8 +22,12 @@ public class PlayerInputProvider : MonoBehaviour
     public bool answeredQuestion = true;
     public ScoreManager scoreManager;
     public bool AnsweredCorrectly = false;
+    public TMP_Text scoreText;
+
     public void Start(){
         scoreManager = GetComponent<ScoreManager>();
+        scoreText.text = "0";
+
         inputproviders.Add(this);
     }
     public void Reset(){
@@ -57,10 +63,11 @@ public class PlayerInputProvider : MonoBehaviour
 
     public void CheckAnswer(){
         if(AnsweredCorrectly){
-            scoreManager.score++;
+            scoreManager.score += 100;
         }
         else {
-            scoreManager.health++;
+            scoreManager.health--;
         }
+        scoreText.text = "" + scoreManager.score;
     }
 }

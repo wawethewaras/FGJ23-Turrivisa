@@ -1320,6 +1320,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4715294473582641075, guid: 41bf3d06265563f4d96fb23ce04e64c6, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1914391923}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 41bf3d06265563f4d96fb23ce04e64c6, type: 3}
 --- !u!4 &825504113 stripped
@@ -2236,6 +2240,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4715294473582641075, guid: 41bf3d06265563f4d96fb23ce04e64c6, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 238616571}
+    - target: {fileID: 4715294473582641075, guid: 41bf3d06265563f4d96fb23ce04e64c6, type: 3}
       propertyPath: playerIndex
       value: 2
       objectReference: {fileID: 0}
@@ -2525,6 +2533,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4715294473582641075, guid: 41bf3d06265563f4d96fb23ce04e64c6, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1918661951}
     - target: {fileID: 4715294473582641075, guid: 41bf3d06265563f4d96fb23ce04e64c6, type: 3}
       propertyPath: playerIndex
       value: 3
@@ -3318,6 +3330,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4715294473582641075, guid: 41bf3d06265563f4d96fb23ce04e64c6, type: 3}
+      propertyPath: scoreText
+      value: 
+      objectReference: {fileID: 1844186851}
     - target: {fileID: 4715294473582641075, guid: 41bf3d06265563f4d96fb23ce04e64c6, type: 3}
       propertyPath: playerIndex
       value: 1

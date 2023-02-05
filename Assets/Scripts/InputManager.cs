@@ -17,20 +17,20 @@ public class InputManager : MonoBehaviour
     }
 
     public void AnswerRight(InputAction.CallbackContext context){
-                if(playerInputProvider == null){
+        if(playerInputProvider == null){
             return;
         }
         playerInputProvider.AnswerRight(context);
     }
     public void AnswerDown(InputAction.CallbackContext context){
-                if(playerInputProvider == null){
+        if(playerInputProvider == null){
             return;
         }
         playerInputProvider.AnswerDown(context);
 
     }
     public void AnswerLeft(InputAction.CallbackContext context){
-                if(playerInputProvider == null){
+        if(playerInputProvider == null){
             return;
         }
         playerInputProvider.AnswerLeft(context);

@@ -21,7 +21,6 @@ public class QuestionManager : MonoBehaviour
 
     public static List<CurrentQuestion> currentQuestionCategory = new List<CurrentQuestion>();
 
-    static List<string> currentQuestions = new List<string>();
     public static int correctAnswerIndex = 0;
     public bool SetCategory(){
         if(QuestionParser.categoryList.Count <= 0){
@@ -38,7 +37,6 @@ public class QuestionManager : MonoBehaviour
 
     [ContextMenu("CreateQuestions")]
     public bool CreateQuestions(){
-        currentQuestions.Clear();
         if(currentQuestionCategory.Count <= 0){
             //No more questions in category
             return false;
@@ -46,19 +44,8 @@ public class QuestionManager : MonoBehaviour
         var index = UnityEngine.Random.Range(0, currentQuestionCategory.Count-1);
         currentQuestion = currentQuestionCategory[index];
         currentQuestionCategory.RemoveAt(index);
-        Debug.Log(currentQuestion.currentQuestion);
-        currentQuestions.Add(currentQuestion.aAnswer);
-        currentQuestions.Add(currentQuestion.bAnswer);
-        currentQuestions.Add(currentQuestion.cAnswer);
-        currentQuestions.Add(currentQuestion.dAnswer);
-        currentQuestions = currentQuestions.OrderBy(a => Guid.NewGuid()).ToList();
-        for(int i = 0; i < currentQuestions.Count; i++){
-            if(currentQuestions[i] == currentQuestion.aAnswer){
-                correctAnswerIndex = i;
-                break;
-            }
-        }
-        uIManager.SetQuestionText(currentQuestion);
+
+        correctAnswerIndex = uIManager.SetQuestionText(currentQuestion);
         return true;
     }
 
