@@ -28,7 +28,7 @@ public class PlayerInputProvider : MonoBehaviour
     public float counter = 0f;
     public float currentMoveInputX = 0;
 
-    public void Start(){
+    public void Awake(){
         scoreManager = GetComponent<ScoreManager>();
         if(scoreText != null){
             scoreText.text = "0";

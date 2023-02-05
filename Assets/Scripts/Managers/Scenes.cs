@@ -7,6 +7,7 @@ public class Scenes : MonoBehaviour
 {
     public void LoadNewScene(string sceneName)
     {
+        PlayerInputProvider.inputproviders.Clear();
         SceneManager.LoadScene(sceneName);
     }
 

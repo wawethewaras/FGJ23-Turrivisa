@@ -18,7 +18,6 @@ public class UIManager : MonoBehaviour
         var currentQuestions = new List<string>();
 
         questionText.text  = currentQuestion.currentQuestion;
-        Debug.Log(currentQuestion.currentQuestion);
         currentQuestions.Add(currentQuestion.aAnswer);
         currentQuestions.Add(currentQuestion.bAnswer);
         currentQuestions.Add(currentQuestion.cAnswer);

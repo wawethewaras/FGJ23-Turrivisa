@@ -22,8 +22,8 @@ public class GameAreaManager : MonoBehaviour
 
     public GameState gameState;
 
-    public float timeToAnswerQuestion;
-    public float currentTimer;
+    private float timeToAnswerQuestion =5f;
+    private float currentTimer = 5f;
     public int questionsInCategory = 5;
     public int currentquestionsInCategory = 0;
 
@@ -34,16 +34,24 @@ public class GameAreaManager : MonoBehaviour
     {
         QuestionParser.Init();
         gameState = GameState.StartOfRound;
+        currentTimer = timeToAnswerQuestion;
     }
-    [ContextMenu("ResetQuestion")]
+    [ContextMenu("StartOfCategoryTest")]
     public void StartOfCategoryTest() {
+        print("TEst:" + PlayerInputProvider.inputproviders.Count);
+
+        InputManager.ReAttach();
         gameState = GameState.StartOfCategory;
     }
 
     public void Update(){
         switch (gameState) {
             case GameState.StartOfRound:
-                break;
+            currentTimer -= Time.deltaTime;
+            if(currentTimer < 0){
+                StartOfCategoryTest();;
+            }
+            break;
             case GameState.StartOfCategory:
                 StartOfCategory();
                 break;
