@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public int score;
-    public int health;
+    public int health = 4;
     public int playerIndex;
 
     public PlayerInfo playerInfo;
