@@ -5,7 +5,7 @@ using UnityEngine;
 public class ScoreManager : MonoBehaviour
 {
     public int score;
-    public int health = 4;
+    private int health = 4;
     public int playerIndex;
 
     public PlayerInfo playerInfo;
@@ -34,7 +34,7 @@ public class ScoreManager : MonoBehaviour
 
 
 
-        GameObject child = gameObject.transform.GetChild(0).gameObject;
+        GameObject child = characters[0];
         Animator animator = child.GetComponent<Animator>();
 
         animator.SetInteger("TeethLeft", health);

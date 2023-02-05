@@ -96,6 +96,9 @@ public class PlayerInputProvider : MonoBehaviour
         }
     }
     public void CheckAnswer(){
+        if(!isActive){
+            return;
+        }
         if(AnsweredCorrectly){
             scoreManager.score += 100;
         }
